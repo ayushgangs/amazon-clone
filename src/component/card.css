@@ -1,0 +1,107 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.content{
+    background-color: aqua;
+    height:83%;
+    padding-top: 5%;
+    /* width: 100%; */
+    /* position: relative; */
+    /* top: 10.5vh; */
+    display: flex;
+    flex-wrap: wrap;
+    /* width:fit-content; */
+
+    overflow: auto;
+    /* margin-bottom: 20px; */
+    /* z-index: -1; */
+}
+.card{
+    background-color: red;
+    height: 35%;
+    width: 16rem;
+    margin: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    outline-style: solid;
+    outline-width: 1px;
+    /* position: relative; */
+}
+
+.card-img{
+    width: 100%;
+    height: 60%;
+    margin-bottom: 5px;
+    /* background-color: yellow; */
+   
+}
+
+.shirt{
+    /* background-color: blueviolet; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.shirt-comp{
+    /* background-color: aqua; */
+    font-weight: bold;
+    width: fit-content;
+    
+    
+}
+.shirt-name{
+    /* background-color: burlywood; */
+    /* width: 250px; */
+    max-width: 16rem;
+    height: 40px;
+    /* max-width: 12rem; */
+    margin-bottom: 10px;
+    display: flex;
+    text-align: center;
+    
+}
+
+.price{
+    /* background-color: chartreuse; */
+    width: fit-content;
+    font-weight: 600;
+    font-size: 25px;
+    color: maroon;
+    margin-left: 35px;
+    margin-bottom: 8px;
+}
+.stock{
+    /* background-color: aqua; */
+    margin-left: 58px;
+    margin-bottom: 10px;
+}
+em{
+    margin-left: 5px;
+}
+.add-button{
+    width: 150px;
+    height: 30px;
+    margin-left: 50px;
+    background-color: blueviolet;
+    color: white;
+    border-radius: 15px;
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

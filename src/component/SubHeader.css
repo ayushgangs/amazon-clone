@@ -1,0 +1,57 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.subheader{
+    background-color: #232f3e;
+    height: 4%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 6.5vh;
+    z-index: 1;
+  }
+  
+  .subheader i{
+    color: white;
+    position: absolute;
+    left: 20px;
+    font-size: 20px;
+  
+  }
+  
+  .all{
+    /* background-color: red; */
+    position: absolute;
+    color: white;
+    left:42px;
+    font-size: 13px;
+    font-weight: bold;
+   
+  }
+
+  .shirts{
+    /* background-color: red; */
+    color: white;
+    position: absolute;
+    font-weight: 600;
+    left: 80px;
+    font-size: 13px;
+    text-decoration: none;
+   
+
+  }
+  
+  .pants{
+    /* background-color: aqua; */
+    color: white;
+    position: absolute;
+    left: 135px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+  
+  }

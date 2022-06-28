@@ -1,0 +1,134 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.cont{
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 10.5vh;
+    /* height: 87vh; */
+}
+
+
+.rectangle{
+    
+    margin: 20px;
+    background-color: burlywood;
+    height: 250px;
+    width:50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    outline: black solid 0.5px;
+}
+
+.rectangle>img{
+    height: 250px;
+    width: 23%;
+}
+
+.quant{
+    position: absolute;
+    background-color: greenyellow;
+    height: 30px;
+    width:  60px;
+    left: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    font-weight: 600;
+    outline-style:solid;
+    outline-width: 0.5px;
+}
+
+.mul{
+    background-color: burlywood;
+    position: absolute;
+    left:380px;
+}
+
+.pr{
+    background-color: greenyellow;
+    position: absolute;
+    left: 410px;
+    height: 30px;
+    width:  60px;
+    font-size: large;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline-style:solid;
+    outline-width: 0.5px;
+}
+
+.arrow{
+    /* background-color: red; */
+    position: absolute;
+    left: 490px;
+}
+
+.tot-pr{
+    background-color: rgb(22, 192, 234);
+    height: 30px;
+    width:  80px;
+    outline : black solid 0.5px;
+    position: absolute;
+    left: 530px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    font-weight: 600;
+}
+
+.btn{
+    /* background-color: aqua; */
+    height: 170px;
+    width: 150px;
+    position: absolute;
+    left: 680px;
+    padding-top: 30px;
+    
+}
+
+.add-quant{
+    width: 30px;
+    height: 30px;
+    background-color: blueviolet;
+    color: white;
+    border-radius:50px;
+    margin-bottom: 50px;
+    font-weight: 600;
+    font-size: large;
+    margin-left: 20px;
+}
+
+.rem-quant{
+    width: 30px;
+    height: 30px;
+    background-color: blueviolet;
+    color: white;
+    border-radius:50px;
+    margin-bottom: 50px;
+    font-weight: 600;
+    font-size: large;
+    margin-left: 50px;
+}
+
+.del-btn{
+    background-color: red;
+    width: 150px;
+    height: 30px;
+    color: white;
+    border-radius: 15px;
+    margin-bottom: 50px;
+    font-weight: 600;
+}

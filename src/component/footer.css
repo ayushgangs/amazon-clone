@@ -1,0 +1,14 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.footer{
+    background-color: orangered;
+    height: 6.5%;
+    position: fixed;
+    top: 93.5vh;
+    width: 100%;
+    /* margin-top: 1.5rem; */
+}

@@ -1,25 +1,85 @@
-import logo from './logo.svg';
+
 import './App.css';
+import './component/SubHeader.css'
+// import './component/card.css'
+import './component/footer.css'
+import Card from './component/Card';
+// import Home from './component/Home';
+import AmzHeader from './component/AmzHeader';
+import SubHeader from './component/SubHeader';
+import Footer from './component/Footer';
+import {BrowserRouter,Routes,Route} from 'react-router-dom'
+import Shirts from './component/subHeaderOpt/Shirts';
+import Pants from './component/subHeaderOpt/Pants';
+import React,{useState} from 'react'
+import Cart from './component/cartpage/Cart'
+import SignIn from './component/siginpage/SignIn';
+import LogIn from './component/loginpage/logIn';
+// import data from "./object"
 
 function App() {
+  let [inputState,setInputState] = useState('')  //for filtering products based on input on search bar
+  let [cart,setCart] = useState([]) //'cart' is used to display total items in cart in header
+  
+  function addToCart(product){ //'ele' from child component gets transferred to 'product'
+    let productInCart = cart.find(ele => ele.id===product.id) // 'productIncart' will stay empty everytime a new product is 
+    // added which is not there in cart
+    
+    if(productInCart)
+    {
+      if(productInCart.quantity<productInCart.stock)    
+          setCart(cart.map(ele=> ele.id===product.id?{...productInCart, quantity:productInCart.quantity+1}:ele)) 
+        //if product already exist in cart increase the quantity by 1
+    }
+    else
+    {
+
+      setCart([...cart, {...product, quantity:1}])
+      // for every new product, add that in cart with a new key 'quantity' initialized with value 1
+    }
+  }
+  
+  // console.log(cart)
+
+  function reduceQuantityInCart(product){
+  
+      if(product.quantity>1)   
+        setCart(cart.map(ele=> ele.id===product.id?{...product, quantity:product.quantity-1}:ele))
+        //this will reduce the product quantity by 1
+
+      else    //if product quantity is 1 then reducing it further will remove the whole product from cart
+        setCart(cart.filter(ele=> ele.id!==product.id))
+      
+      
+  }
+
+  function deleteFromCart(product)
+  {
+      setCart(cart.filter(ele=> ele.id!==product.id))
+  }
+  
+ 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        
+        <BrowserRouter>
+        <AmzHeader setInp={{setInputState,cart}}/>
+        <SubHeader/>
+        {/* things b/w <BrowserRouter> and <Routes> stay constant on all components */}
+          <Routes>
+            <Route path='/' element={<Card inpSt={{inputState,addToCart}}/>}></Route>
+            <Route path="/signInpage" element={<SignIn/>}></Route>
+            <Route path="/logInpage" element={<LogIn/>}></Route>
+            <Route path='/shirts' element={<Shirts addShirt={addToCart}/>}></Route>
+            <Route path='/pants' element={<Pants addPant={addToCart}/>}></Route>
+            <Route path='/cartpage' element={<Cart cart={{cart,addToCart,deleteFromCart,reduceQuantityInCart}}/>}></Route>
+          </Routes>
+        <Footer/>
+        </BrowserRouter>
+      
     </div>
   );
+  
 }
 
 export default App;
