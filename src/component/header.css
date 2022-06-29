@@ -4,78 +4,68 @@
     margin:0;
   }
   
-  .App,#root{
+  /* .App,#root{
     height: 100%;
     width: 100%;
   
-  }
+  } */
   
   .header{
     background-color: rgb(22, 24, 30);
     height: 6.5%;
     width: 100%;
-    position: fixed;
     display: flex;
     align-items: center;
-    z-index: 1;
   }
   
   .amz-img{
     height: 100%;
-    /* background-color: rgb(9, 15, 32); */
-    
   }
   
   .searchbar{
     /* background-color: red; */
-    position: absolute;
-    left: 300px;
-    height: 40px;
-    width: 1300px;
-    border-radius: 6px;
+    height: 70%;
+    width: 65%;
+    margin-left: 5%;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
     border-style: none;
     font-size: 20px;
     padding-left: 40px;
+    outline: none;
   }
   
   .search-icon{
     background-color: #ffb84d;
-    height: 40px;
-    width: 45px;
+    height: 70%;
+    width: 55px;
     display:flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    left:1555px;
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
+    margin-right: 2.5%;
   }
   
   .search-icon i{
     /* background-color: rgb(238, 238, 13); */
-    left: 1280px;
     font-size: 23px;
   }
   
   .cart{
     /* background-color: red; */
-    position: absolute;
-    left: 1630px;
-    height: 35px;
-    width: 80px;
+    height: 60%;
+    width: 4%;
     display: flex;
     align-items: center;
+    justify-content: space-around;
     border-radius: 5px;
-    outline-color: white;
-    outline-style: solid;
-    outline-width: 1px;
+    outline: white solid 1px;
+    margin-right: 2.5%;
   }
   
   .cart i{
     /* background-color: chartreuse; */
-    position: absolute;
-    left: 5px;
-    top: 6px;
     color: white;
     font-size: 23px;
     text-decoration: none;
@@ -83,10 +73,8 @@
   .cart-count{
     background-color: red;
     color: white;
-    position: absolute;
     height: 25px;
     width: 25px;
-    left: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -95,8 +83,7 @@
   
   .signin{
     /* background-color: blueviolet; */
-    position: absolute;
-    left:1740px;
+    
     color: greenyellow;
     width: 60px;
     height: 30px;
@@ -104,13 +91,12 @@
     align-items: center;
     justify-content: center;
     border-radius: 5px;
-    outline-color: white;
-    outline-style: solid;
-    outline-width: 1px;
+    outline: white solid 1px;
     text-decoration: underline;
+  
   }
   
   .login{
-    position: absolute;
-    left: 1825px;
+    margin-left: 2%;
+    
   }  

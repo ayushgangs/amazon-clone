@@ -1,11 +1,11 @@
 import React from 'react'
 import '../card.css'
 
-export default function ShirtComp({data}) {
+export default function ShirtComp({ data }) {
     // console.log(data)
-  return (
-    <>
-        <div className='content'>
+    return (
+        <>
+            <div className='content'>
                 {
                     data.arr.map((ele) => {
 
@@ -13,14 +13,19 @@ export default function ShirtComp({data}) {
 
 
                             <div className='card' key={ele.id}>
-                                <img src={ele.image} />
+                                <div className='card-img'>
+                                    <img src={ele.image} alt="" />
+                                </div>
                                 <div className='shirt'>
-                                    <span className='shirt-comp'>{ele.shirtComp}</span>
+                                    <div className='shirt-comp'>{ele.shirtComp}</div>
                                     <div className='shirt-name'>{ele.shirtName}</div>
                                 </div>
                                 <span className='price'>₹{ele.price}</span>
-                                <span className='stock'>({ele.stock}) <em>In Stock</em></span>
-                                <button className="add-button" onClick={()=> data.addShirt(ele)}>Add to Cart</button>
+                                <div className='stock'>({ele.stock}) <em>In Stock</em></div>
+                                <div className='a-b'>
+                                    <button className="add-button" onClick={() => data.addShirt(ele)}>Add to Cart</button>
+
+                                </div>
 
                             </div>
 
@@ -31,7 +36,7 @@ export default function ShirtComp({data}) {
 
                     )
                 }
-        </div>
-    </>
-  )
+            </div>
+        </>
+    )
 }

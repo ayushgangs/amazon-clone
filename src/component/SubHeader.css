@@ -10,24 +10,21 @@
     width: 100%;
     display: flex;
     align-items: center;
-    position: fixed;
-    top: 6.5vh;
-    z-index: 1;
+    
   }
   
   .subheader i{
     color: white;
-    position: absolute;
-    left: 20px;
+    margin-left: 1%;
     font-size: 20px;
   
   }
   
   .all{
     /* background-color: red; */
-    position: absolute;
+    margin-left: 0.2%;
     color: white;
-    left:42px;
+    
     font-size: 13px;
     font-weight: bold;
    
@@ -36,9 +33,8 @@
   .shirts{
     /* background-color: red; */
     color: white;
-    position: absolute;
+    margin-left: 1%;
     font-weight: 600;
-    left: 80px;
     font-size: 13px;
     text-decoration: none;
    
@@ -48,8 +44,7 @@
   .pants{
     /* background-color: aqua; */
     color: white;
-    position: absolute;
-    left: 135px;
+    margin-left: 1%;
     font-size: 13px;
     font-weight: 600;
     text-decoration: none;

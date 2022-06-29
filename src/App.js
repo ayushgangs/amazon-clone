@@ -1,10 +1,6 @@
 
 import './App.css';
-import './component/SubHeader.css'
-// import './component/card.css'
-import './component/footer.css'
 import Card from './component/Card';
-// import Home from './component/Home';
 import AmzHeader from './component/AmzHeader';
 import SubHeader from './component/SubHeader';
 import Footer from './component/Footer';
@@ -20,6 +16,7 @@ import LogIn from './component/loginpage/logIn';
 function App() {
   let [inputState,setInputState] = useState('')  //for filtering products based on input on search bar
   let [cart,setCart] = useState([]) //'cart' is used to display total items in cart in header
+  let [totCartPrice,setTotCartPrice] = useState(0)
   
   function addToCart(product){ //'ele' from child component gets transferred to 'product'
     let productInCart = cart.find(ele => ele.id===product.id) // 'productIncart' will stay empty everytime a new product is 
@@ -27,15 +24,22 @@ function App() {
     
     if(productInCart)
     {
-      if(productInCart.quantity<productInCart.stock)    
-          setCart(cart.map(ele=> ele.id===product.id?{...productInCart, quantity:productInCart.quantity+1}:ele)) 
+      if(productInCart.quantity<productInCart.stock) 
+      {
+
+        setCart(cart.map(ele=> ele.id===product.id?{...productInCart, quantity:productInCart.quantity+1}:ele)) 
         //if product already exist in cart increase the quantity by 1
+        
+        setTotCartPrice(totCartPrice + productInCart.price)
+      }   
     }
     else
     {
 
       setCart([...cart, {...product, quantity:1}])
       // for every new product, add that in cart with a new key 'quantity' initialized with value 1
+
+      setTotCartPrice(totCartPrice + product.price)
     }
   }
   
@@ -50,12 +54,15 @@ function App() {
       else    //if product quantity is 1 then reducing it further will remove the whole product from cart
         setCart(cart.filter(ele=> ele.id!==product.id))
       
+      setTotCartPrice(totCartPrice - product.price)
       
   }
 
   function deleteFromCart(product)
   {
       setCart(cart.filter(ele=> ele.id!==product.id))
+
+      setTotCartPrice(totCartPrice - (product.quantity * product.price))
   }
   
  
@@ -72,7 +79,7 @@ function App() {
             <Route path="/logInpage" element={<LogIn/>}></Route>
             <Route path='/shirts' element={<Shirts addShirt={addToCart}/>}></Route>
             <Route path='/pants' element={<Pants addPant={addToCart}/>}></Route>
-            <Route path='/cartpage' element={<Cart cart={{cart,addToCart,deleteFromCart,reduceQuantityInCart}}/>}></Route>
+            <Route path='/cartpage' element={<Cart cart={{cart,addToCart,deleteFromCart,reduceQuantityInCart,totCartPrice}}/>}></Route>
           </Routes>
         <Footer/>
         </BrowserRouter>

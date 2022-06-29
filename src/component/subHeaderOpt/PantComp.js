@@ -13,14 +13,19 @@ export default function PantComp({data}) {
 
 
                             <div className='card' key={ele.id}>
-                                <img src={ele.image} />
+                                <div className='card-img'>
+                                    <img src={ele.image} alt="" />
+                                </div>
                                 <div className='shirt'>
-                                    <span className='shirt-comp'>{ele.shirtComp}</span>
+                                    <div className='shirt-comp'>{ele.shirtComp}</div>
                                     <div className='shirt-name'>{ele.shirtName}</div>
                                 </div>
                                 <span className='price'>₹{ele.price}</span>
-                                <span className='stock'>({ele.stock}) <em>In Stock</em></span>
-                                <button className="add-button" onClick={()=> data.addPant(ele)}>Add to Cart</button>
+                                <div className='stock'>({ele.stock}) <em>In Stock</em></div>
+                                <div className='a-b'>
+                                    <button className="add-button" onClick={() => data.addPant(ele)}>Add to Cart</button>
+
+                                </div>
 
                             </div>
 

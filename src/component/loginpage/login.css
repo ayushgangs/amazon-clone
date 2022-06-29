@@ -4,8 +4,9 @@
     box-sizing: border-box;
 }
 
-.loginComp{
+.login-content{
     /* background-color: red; */
-    position: relative;
-    top:10.5vh;
+    height: 83%;
+    width: 100%;
+    
 }

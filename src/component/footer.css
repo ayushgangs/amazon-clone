@@ -7,8 +7,11 @@
 .footer{
     background-color: orangered;
     height: 6.5%;
-    position: fixed;
-    top: 93.5vh;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:cursive;
+    font-size: larger;
     /* margin-top: 1.5rem; */
 }

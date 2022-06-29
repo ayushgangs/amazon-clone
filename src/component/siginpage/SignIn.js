@@ -4,7 +4,9 @@ import "./signin.css"
 export default function SignIn() {
   return (
     <>
-        <div className='signinComp'>this is SignIn page</div>
+        <div className='signin-content'>
+          this is SignIn page
+        </div>
     </>
   )
 }
