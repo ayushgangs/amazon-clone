@@ -59,6 +59,10 @@ export default function Cart({ cart }) {
         <div className='total-price'>
           Total Cart Price: ₹{cart.totCartPrice}
         </div>
+        <div className=' total-price empty-cart'>
+          <button type='button' onClick={cart.emptyCart}>Delete All</button>
+        </div>
+
       </div>
 
     </>

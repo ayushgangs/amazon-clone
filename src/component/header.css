@@ -4,21 +4,24 @@
     margin:0;
   }
   
-  /* .App,#root{
-    height: 100%;
-    width: 100%;
   
-  } */
   
   .header{
     background-color: rgb(22, 24, 30);
     height: 6.5%;
-    width: 100%;
+    /* width: 100%; */
+    width: 100vw;
     display: flex;
     align-items: center;
   }
   
   .amz-img{
+    background-color: red;
+    height: 100%;
+    
+  }
+
+  .amz-img img{
     height: 100%;
   }
   
@@ -67,21 +70,21 @@
   .cart i{
     /* background-color: chartreuse; */
     color: white;
-    font-size: 23px;
+    font-size: 1.5vw;
     text-decoration: none;
   }
   .cart-count{
     background-color: red;
     color: white;
-    height: 25px;
-    width: 25px;
+    height: 1.4vw;
+    width: 1.4vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 25px;
+    border-radius: 1.4vw;
   }
   
-  .signin{
+  .signup{
     /* background-color: blueviolet; */
     
     color: greenyellow;

@@ -7,7 +7,7 @@ export default function Card({ inpSt }) {
 
     let filteredData = data.filter(ele => ele.type.includes(inpSt.inputState.toLowerCase()))
 
-    console.log(filteredData);
+    // console.log(filteredData);
     return (
 
         <div className='content'>

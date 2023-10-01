@@ -8,14 +8,18 @@ export default function AmzHeader({setInp}){
     // console.log(setInp);
     
     function manageInp(e){
-        // console.log(e.target.value)
+        console.log(e)
         setInp.setInputState(e.target.value)
     }
     return(
         <div className="header">
-            <Link to='/'><img className="amz-img" src={amzimg} alt=""></img></Link>
+            <div className="amz-img">
+                <Link to='/'><img src={amzimg} alt="amz-logo"/></Link>
+
+            </div>
             
-            <input type="text" className="searchbar" placeholder="Search Your Product" onChange={manageInp}></input>
+            <input type="text" className="searchbar" placeholder="Search Your Product" onChange={manageInp}/>
+
             <div className="search-icon">
 
                 <i className="fa fa-search"></i>
@@ -24,8 +28,8 @@ export default function AmzHeader({setInp}){
                 <Link to='/cartpage'><i className="fa fa-shopping-cart"></i></Link>
                 <div className='cart-count'>{setInp.cart.length}</div>
             </div>
-            <Link to="/signInpage" className="signin"><div>Sign In</div></Link>
-            <Link to="/logInpage" className='signin login'><div>Log In</div></Link>
+            {/* <Link to="/signuppage" className="signup"><div>Sign Up</div></Link>
+            <Link to="/logInpage" className='signup login'><div>Log In</div></Link> */}
             
         </div>
     )

@@ -115,7 +115,6 @@
     height: 70%;
     width: 18%;
     margin-right: 5%;
-   
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -186,3 +185,20 @@
     outline: rgb(44, 205, 125) solid 5px;
 }
 
+.empty-cart{
+    /* background-color: yellow; */
+    height: fit-content;
+    top: 57%;
+    justify-content: center;
+    outline: none;
+
+}
+
+.empty-cart button{
+    height: 40px;
+    width: 80px;
+    outline: 3px solid red;
+    background-color: black;
+    color: white;
+    border: none;
+}
